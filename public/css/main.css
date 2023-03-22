@@ -1,0 +1,276 @@
+:root {
+    --background-color: #E5D1FA;
+    --bs-primary-rgb: #12296c;
+    --mian-font: 'Poppins', sans-serif;
+    --journal--font: 'Shantell Sans', cursive;
+    --quote--font: 'Dancing Script', cursive;
+    --logo--font: 'Rubik Iso', cursive;
+}
+
+body {
+    font-family: var(--mian-font);
+    background: var(--background-color);
+    color: var(--bs-primary-rgb);
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+}
+
+.container-fluid-custom {
+    max-width: 1400px;
+}
+
+.card-title {
+    color: var(--bs-primary-rgb);
+    font-size: 1.5rem;
+}
+
+/************* header *************/
+.logo {
+    font-family: var(--logo--font);
+}
+
+/************* dashboard, add, view-journal *************/
+.journal-title-font {
+    font-family: var(--journal--font);
+    font-weight: 600;
+}
+
+.journal-font {
+    font-family: var(--journal--font);
+}
+
+.db-journal-header {
+    border-bottom: 1px solid grey;
+}
+
+.writing-area,
+.view-journal {
+    background: url(../img/thoughts.svg) right no-repeat;
+    background-size: 50%;
+}
+
+.add-Journal {
+    width: 70%;
+}
+
+/************* Search page *************/
+.search-font a {
+    color: var(--bs-primary-rgb);
+}
+
+.search-font a:hover {
+    opacity: 0.9;
+
+}
+
+/********* buttons *********/
+.btn {
+    border-radius: 1.5rem;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary-rgb);
+    --bs-btn-border-color: var(--bs-primary-rgb);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0043a8;
+    --bs-btn-hover-border-color: #0043a8;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-primary-rgb);
+    --bs-btn-active-border-color: var(--bs-primary-rgb);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bs-primary-rgb);
+    --bs-btn-disabled-border-color: var(--bs-primary-rgb);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary-rgb);
+    --bs-btn-border-color: var(--bs-primary-rgb);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0043a8;
+    --bs-btn-hover-border-color: #0043a8;
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-primary-rgb);
+    --bs-btn-active-border-color: #var(--bs-primary-rgb);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--bs-primary-rgb);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--bs-primary-rgb);
+    --bs-gradient: none;
+}
+
+/********* Quote(in add page) *********/
+.quote {
+    font-family: var(--quote--font);
+    background: #E5D1FA05;
+    border: none;
+}
+
+.quote-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.quote-text {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.author {
+    display: flex;
+    justify-content: end;
+}
+
+.author h6 {
+    font-weight: 500;
+}
+
+.quote-hidden {
+    max-width: 30%;
+}
+
+/********* pagination *********/
+.active>.page-link,
+.page-link.active {
+    z-index: 3;
+    color: var(--bs-pagination-active-color);
+    background-color: var(--bs-primary-rgb);
+    border-color: var(--bs-primary-rgb);
+}
+
+.pagination {
+    --bs-pagination-color: var(--bs-primary-rgb);
+}
+
+/********* contact *********/
+.contact {
+    text-align: center;
+    margin-top: 5%;
+    padding: 0 5%;
+    height: 80vh;
+}
+
+.contact-text h2 {
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.contact-text h4 {
+    margin: 18px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-list {
+    margin-bottom: 2.8rem;
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.contact-list li i {
+    margin-right: 10px;
+}
+
+.contact-list li a {
+    display: block;
+    color: var(--bs-primary-rgb);
+    font-size: 14px;
+    transition: all .45s ease;
+    text-decoration: none;
+}
+
+.contact-list li a:hover {
+    opacity: 0.9;
+    transform: translateX(5px);
+}
+
+/********* auth *********/
+.auth {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 10% auto;
+    width: 60%;
+}
+
+.auth i {
+    font-size: 1.3rem;
+}
+
+.auth h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.auth .breaker {
+    background: var(--background-color);
+    padding: 0 10px;
+}
+
+.login {
+    border-right: 1px solid grey;
+    padding-right: 20px;
+}
+
+/********* responsive *********/
+@media (min-width:1200px) {
+    .home {
+        background:
+            url("../img/undraw_compose_music_re_wpiw.svg") left bottom no-repeat,
+            url("../img/undraw_compose_music_re_wpiw.svg") right bottom no-repeat,
+            var(--background-color);
+    }
+}
+
+@media (max-width:900px) {
+    .quote-text {
+        font-size: 1rem;
+    }
+
+    .quote-title {
+        font-size: 1.5rem;
+    }
+
+    .quote-author {
+        font-size: 1rem;
+    }
+
+    .blank-dashboard img {
+        width: 90%;
+    }
+}
+
+@media (max-width:576px) {
+    .quote-hidden {
+        display: none;
+        width: 0%;
+    }
+
+    .add-Journal {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+}

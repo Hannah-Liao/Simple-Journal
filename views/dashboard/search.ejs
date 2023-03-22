@@ -1,0 +1,21 @@
+<div class="container-fluid container-fluid-custom pb-5 mb-5">
+
+    <div class="row search-font">
+
+        <% if (searchResults !="" ) { %>
+
+            <% searchResults.forEach((journal, index)=>{ %>
+                <a href="/dashboard/item/<%= journal._id %>">
+                    <h4>
+                        <%= journal.title %>
+                    </h4>
+                </a>
+                <% }) %>
+
+                    <% } else {%>
+                        <p>No journals found.</p>
+                        <% } %>
+
+    </div>
+
+</div>

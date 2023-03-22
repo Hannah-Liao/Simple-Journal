@@ -1,0 +1,116 @@
+<div class="container-fluid container-fluid-custom pb-5 mb-5">
+
+    <!-------- greeting area -------->
+    <div class="row mb-4 px-3">
+        <div class="col">
+            <h1>Good day <%= userName %>
+            </h1>
+        </div>
+        <div class="col text-end">
+            <a href="/dashboard/add" class="btn btn-primary">Write Journal</a>
+        </div>
+    </div>
+
+    <!-- journals area -->
+    <div class="grid">
+        <% if (journals.length> 0) { %>
+            <% for (let i=0; i < journals.length; i++) { %>
+                <div class="col px-5">
+                    <img src="/img/cat_2.svg" alt="cat-image" width="200">
+                </div>
+
+                <div class="col mb-4 px-5">
+                    <div class="card border-primary" style="min-height: 300px">
+                        <div class="db-journal-header pt-3">
+                            <a href="/dashboard/item/<%= journals[i]._id %>" class="text-decoration-none">
+                                <h5 class="card-title text-center journal-title-font">
+                                    <%= journals[i].title %>
+                                </h5>
+                            </a>
+                            <p class="text-center">
+                                <span>
+                                    <%= journals[i].createAt %>
+                                </span>
+
+                            </p>
+                        </div>
+
+                        <p class="card-text p-4 journal-font">
+                            <%= journals[i].body %>
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-------- first login dashboard page/ no journals page -------->
+                <% }} else { %>
+                    <div class="row">
+                        <div class="col-4 blank-dashboard">
+                            <img src="/img/dashboard-img.svg" alt="dashboard-img">
+                        </div>
+
+                        <div class="col mt-md-4">
+                            <h2>Hey ...</h2>
+                            <h4>Let' s start with your first journal <br><br>
+                                <a href="/dashboard/add">Create one!</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <% } %>
+
+    </div>
+
+
+    <!-------------- pagination bar ---------------->
+    <% if (journals.length> 0 ) { %>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center mt-5">
+
+                <!-- Previous page button -->
+                <% if (Number(current) !=1) { %>
+                    <li class="page-item"><a class="page-link" href="/dashboard/?page=<%= current - 1 %>">Previous</a>
+                    </li>
+                    <% } %>
+
+
+                        <!-- pages buttons -->
+                        <% var i=(current> 5 ? current - 4 : 1) %>
+                            <% if (i!==1) { %>
+                                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                <% }%>
+
+                                    <% for (; i <=(Number(current) +4) && i <=pages; i ++) { %>
+                                        <% if (i==current) {%>
+                                            <li class="page-item active" aria-current="page"><a class="page-link"
+                                                    href="#">
+                                                    <%= i %>
+                                                </a></li>
+                                            <%} else { %>
+                                                <li class="page-item"><a class="page-link"
+                                                        href="/dashboard/?page=<%= i %>">
+                                                        <%= i %>
+                                                    </a></li>
+                                                <% } %>
+
+                                                    <% if (i==(Number(current) + 4) && i < pages) {%>
+
+                                                        <li class="page-item"><a class="page-link" href="#">...</a>
+                                                        </li>
+                                                        <% } %>
+                                                            <% } %>
+
+                                                                <!-- next page button -->
+                                                                <% if (current!=pages) { %>
+                                                                    <li class="page-item"><a class="page-link"
+                                                                            href="/dashboard/?page=<%= Number(current) + 1 %>">Next</a>
+                                                                    </li>
+                                                                    <% }%>
+
+            </ul>
+
+        </nav>
+
+        <% } %>
+</div>

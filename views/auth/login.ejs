@@ -1,0 +1,31 @@
+<div class="auth row">
+    <!-- local login -->
+    <form class="login col-6" action="/login" method="POST">
+        <h3>Welcome Back!</h3>
+
+        <% if (messages.error) { %>
+            <p style="color: orangered;">
+                <%= messages.error %>
+            </p>
+            <% } %>
+                <div class="d-flex flex-column">
+                    <input name="email" type="text" placeholder="Email" class="mb-3 form-control form-control-lg">
+                    <input name="password" type="password" placeholder="Password"
+                        class="mb-3 form-control form-control-lg">
+                    <button class="mb-4 btn rounded btn-outline-primary" type="submit">Sign in</button>
+                </div>
+
+                <h6><span class="breaker">OR</span></h6>
+                <a href="/register" class="btn btn-primary">Create account</a>
+    </form>
+
+    <!-- google login -->
+    <div class="Googlelogin col-6">
+        <h3>Sign in with social media</h3>
+        <a href="/auth/google" type="button"
+            class="btn btn-primary btn-lg mt-4 d-grid col-8 mx-auto d-flex justify-content-around align-items-center">
+            <i class='bx bxl-google'></i>
+            <span>Sign in with Google</span>
+        </a>
+    </div>
+</div>
