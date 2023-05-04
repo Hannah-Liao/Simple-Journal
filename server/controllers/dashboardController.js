@@ -1,5 +1,6 @@
 const Journal = require("../models/Journal");
 const mongoose = require("mongoose");
+const fetch = require("node-fetch");
 
 exports.dashboard = async (req, res) => {
 
