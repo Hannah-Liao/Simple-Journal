@@ -1,6 +1,6 @@
-<div class="auth row">
+<div class="auth sign-in-container row">
     <!-- local login -->
-    <form class="login col-6" action="/login" method="POST">
+    <form class="login" action="/login" method="POST">
         <h3>Welcome Back!</h3>
 
         <% if (messages.error) { %>
@@ -12,18 +12,21 @@
                     <input name="email" type="text" placeholder="Email" class="mb-3 form-control form-control-lg">
                     <input name="password" type="password" placeholder="Password"
                         class="mb-3 form-control form-control-lg">
-                    <button class="mb-4 btn rounded btn-outline-primary" type="submit">Sign in</button>
+                    <button class="btn rounded btn-outline-primary" type="submit">Sign in</button>
+                    <a href="/auth/google" type="button" class="btn btn-primary glogin-btn gtoggle rounded btn-lg mt-2">
+                        <i class='bx bxl-google'></i>
+                        <span>Sign in with Google</span>
+                    </a>
                 </div>
 
-                <h6><span class="breaker">OR</span></h6>
-                <a href="/register" class="btn btn-primary">Create account</a>
+                <h6 class="mt-4"><span class="breaker">OR</span></h6>
+                <a href="/register" class="btn btn-primary">Create an account</a>
     </form>
 
     <!-- google login -->
-    <div class="Googlelogin col-6">
+    <div class="Googlelogin">
         <h3>Sign in with social media</h3>
-        <a href="/auth/google" type="button"
-            class="btn btn-primary btn-lg mt-4 d-grid col-8 mx-auto d-flex justify-content-around align-items-center">
+        <a href="/auth/google" type="button" class="btn btn-primary glogin-btn rounded btn-lg mt-4">
             <i class='bx bxl-google'></i>
             <span>Sign in with Google</span>
         </a>
