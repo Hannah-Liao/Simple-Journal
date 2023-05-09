@@ -29,45 +29,6 @@ h2 {
     font-size: 1.5rem;
 }
 
-/************* header *************/
-.logo {
-    font-family: var(--logo--font);
-}
-
-/************* dashboard, add, view-journal *************/
-.journal-title-font {
-    font-family: var(--journal--font);
-    font-weight: 600;
-}
-
-.journal-font {
-    font-family: var(--journal--font);
-}
-
-.db-journal-header {
-    border-bottom: 1px solid grey;
-}
-
-.writing-area,
-.view-journal {
-    background: url(../img/thoughts.svg) right no-repeat;
-    background-size: 50%;
-}
-
-.add-Journal {
-    width: 70%;
-}
-
-/************* Search page *************/
-.search-font a {
-    color: var(--bs-primary-rgb);
-}
-
-.search-font a:hover {
-    opacity: 0.9;
-
-}
-
 /********* buttons *********/
 .btn {
     border-radius: 1.5rem;
@@ -105,6 +66,49 @@ h2 {
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: var(--bs-primary-rgb);
     --bs-gradient: none;
+}
+
+/************* header *************/
+.logo {
+    font-family: var(--logo--font);
+}
+
+/************* dashboard, add, view-journal *************/
+.journal-title-font {
+    font-family: var(--journal--font);
+    font-weight: 600;
+}
+
+.journal-font {
+    font-family: var(--journal--font);
+}
+
+.db-journal-header {
+    border-bottom: 1px solid grey;
+}
+
+.db-journal-header a h5:hover {
+    color: #0043a8;
+}
+
+.writing-area,
+.view-journal {
+    background: url(../img/thoughts.svg) right no-repeat;
+    background-size: 50%;
+}
+
+.add-Journal {
+    width: 70%;
+}
+
+/************* Search page *************/
+.search-font a {
+    color: var(--bs-primary-rgb);
+}
+
+.search-font a:hover {
+    opacity: 0.9;
+
 }
 
 /********* Quote(in add page) *********/
