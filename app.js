@@ -30,7 +30,7 @@ app.use(session({
     store: MongoStore.create({
         mongoUrl: process.env.MONGODB_URI
     }),
-    cookie: { maxAge: new Date(Date.now() + (604800000)) } // 7 days = 7 * 24 * 60 * 60 * 1000 = 604800000
+    cookie: { maxAge: 604800000 } // 7 days = 7 * 24 * 60 * 60 * 1000 = 604800000
 }));
 
 app.use(passport.initialize());
