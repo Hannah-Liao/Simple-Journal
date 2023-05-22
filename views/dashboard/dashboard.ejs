@@ -12,21 +12,20 @@
     </div>
 
     <!-- journals area -->
-    <div class="grid">
+    <div class="journals">
         <% if (journals.length> 0) { %>
             <% for (let i=0; i < journals.length; i++) { %>
-                <div class="col px-5">
+                <div class="px-1">
                     <img src="/img/cat_2.svg" alt="cat-image" width="200">
                 </div>
 
-                <div class="col mb-4 px-5">
-                    <div class="card border-primary" style="min-height: 300px">
-                        <div class="db-journal-header pt-3">
-                            <a href="/dashboard/item/<%= journals[i]._id %>" class="text-decoration-none">
-                                <h5 class="card-title text-center journal-title-font">
-                                    <%= journals[i].title %>
-                                </h5>
-                            </a>
+                <div class="mb-4 px-1">
+                    <a href="/dashboard/item/<%= journals[i]._id %>" class="card border-primary text-decoration-none"
+                        style="min-height: 300px">
+                        <div class="db-journal-header pt-3 ">
+                            <h5 class="card-title text-center journal-title-font">
+                                <%= journals[i].title %>
+                            </h5>
                             <p class="text-center">
                                 <span>
                                     <%= journals[i].createAt %>
@@ -38,7 +37,7 @@
                         <p class="card-text p-4 journal-font">
                             <%= journals[i].body %>
                         </p>
-                    </div>
+                    </a>
                 </div>
 
 

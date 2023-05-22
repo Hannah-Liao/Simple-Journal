@@ -74,21 +74,17 @@ h2 {
 }
 
 /************* dashboard, add, view-journal *************/
-.journal-title-font {
+.card {
     font-family: var(--journal--font);
-    font-weight: 600;
+    color: var(--bs-primary-rgb);
 }
 
-.journal-font {
-    font-family: var(--journal--font);
+.journal-title-font {
+    font-weight: 600;
 }
 
 .db-journal-header {
     border-bottom: 1px solid grey;
-}
-
-.db-journal-header a h5:hover {
-    color: #0043a8;
 }
 
 .writing-area,
