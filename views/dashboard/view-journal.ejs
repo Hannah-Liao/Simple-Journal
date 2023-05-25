@@ -24,15 +24,15 @@
     <!-- method override -->
     <form action="/dashboard/item/<%= journalID %>?_method=PUT" method="POST" class="position-relative">
 
-        <div class="form-group mb-4 position-absolute" style="left: 1px; top: 1px; right: 1px;">
+        <div class="form-group mb-1">
             <input type="text" class="journal-title-font form-control fw-bold border-0 fs-4" id="title" name="title"
                 value="<%= journal.title%>" placeholder="Title" style="background-color: #E5D1FA05; border: none;"
                 required>
         </div>
 
-        <div class="form-group mb-4">
+        <div class="mb-4">
             <textarea name="body" id="body" cols="30" rows="12" placeholder="Write your journal..."
-                class="form-control pt-5 fs-4 journal-font" style="background-color: #E5D1FA05; border: none;"
+                class="form-control fs-4 journal-font" style="background-color: #E5D1FA05; border: none;"
                 required><%= journal.body%></textarea>
         </div>
 
