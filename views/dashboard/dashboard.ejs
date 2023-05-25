@@ -68,7 +68,7 @@
             <ul class="pagination justify-content-center mt-5">
 
                 <!-- Previous page button -->
-                <% if (Number(current) !=1) { %>
+                <% if (current!=1) { %>
                     <li class="page-item"><a class="page-link" href="/dashboard/?page=<%= current - 1 %>">Previous</a>
                     </li>
                     <% } %>
@@ -80,7 +80,7 @@
                                 <li class="page-item"><a class="page-link" href="#">...</a></li>
                                 <% }%>
 
-                                    <% for (; i <=(Number(current) +4) && i <=pages; i ++) { %>
+                                    <% for (; i <=(current +4) && i <=pages; i ++) { %>
                                         <% if (i==current) {%>
                                             <li class="page-item active" aria-current="page"><a class="page-link"
                                                     href="#">
@@ -93,7 +93,7 @@
                                                     </a></li>
                                                 <% } %>
 
-                                                    <% if (i==(Number(current) + 4) && i < pages) {%>
+                                                    <% if (i==(current+ 4) && i < pages) {%>
 
                                                         <li class="page-item"><a class="page-link" href="#">...</a>
                                                         </li>

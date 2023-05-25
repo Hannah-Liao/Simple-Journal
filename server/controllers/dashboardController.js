@@ -31,21 +31,22 @@ exports.dashboard = async (req, res) => {
         ])
             .skip(perPage * page - perPage)
             .limit(perPage)
-            .exec((err, journals) => {
+            .exec(async (err, journals) => {
 
-                Journal.count().exec((err, count) => {
-                    if (err) return next(err);
+                const journal = await Journal.find({ user: req.user.id })
+                const journalCount = journal.length
 
-                    res.render("dashboard/dashboard", {
-                        userName: req.user.lastName,
-                        locals,
-                        journals,
-                        current: page,
-                        pages: Math.ceil(count / perPage),
-                        // set custom layout //
-                        layout: "../views/layouts/dashboard"
-                    });
-                })
+                res.render("dashboard/dashboard", {
+                    userName: req.user.lastName,
+                    locals,
+                    journals,
+                    count: journalCount,
+                    current: page,
+                    pages: Math.ceil(journalCount / perPage),
+                    // set custom layout //
+                    layout: "../views/layouts/dashboard"
+                });
+                // })
             })
 
 
